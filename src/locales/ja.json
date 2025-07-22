@@ -1,9 +1,54 @@
 {
+  "common": {
+    "search": "検索",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "削除"
+  },
+  "toast": {
+    "saved": "保存しました",
+    "deleted": "削除しました",
+    "exportDone": "エクスポートが完了しました"
+  },
+  "error": {
+    "fetchFailed": "取得に失敗しました",
+    "saveFailed": "保存に失敗しました",
+    "deleteFailed": "削除に失敗しました",
+    "exportFailed": "エクスポートに失敗しました"
+  },
+  "oss": {
+    "listTitle": "OSSコンポーネント一覧",
+    "filter": {
+      "name": "名称",
+      "layers": "レイヤ",
+      "tag": "タグ",
+      "inScopeOnly": "IN_SCOPEのみ"
+    },
+    "table": {
+      "name": "名称",
+      "layers": "レイヤ",
+      "tags": "タグ",
+      "deprecated": "非推奨"
+    },
+    "detailTitle": "OSS詳細"
+  },
   "project": {
+    "listTitle": "プロジェクト一覧",
     "filter": {
       "code": "コード",
       "name": "名称",
       "search": "検索"
+    },
+    "table": {
+      "code": "コード",
+      "name": "名称",
+      "deliveryDate": "納品日",
+      "ossUsageCount": "OSS数"
+    },
+    "detailTitle": "プロジェクト詳細",
+    "export": {
+      "csv": "CSVエクスポート",
+      "spdx": "SPDX(JSON)エクスポート"
     },
     "detail": {
       "titleNew": "プロジェクト作成",
@@ -12,12 +57,24 @@
       "cancel": "キャンセル"
     }
   },
-  "export": {
-    "csv": "CSV",
-    "spdx": "SPDX JSON",
-    "toast": "エクスポートが完了しました"
-  },
   "settings": {
+    "title": "設定",
+    "tagsTitle": "タグ管理",
+    "tagsAdd": "タグ追加",
+    "tagsPlaceholder": "タグ名を入力",
+    "tagsDeleteConfirm": "このタグを削除しますか？",
+    "policyTitle": "スコープポリシー",
+    "policy": {
+      "runtimeRequired": "RUNTIME_REQUIRED を自動で IN_SCOPE",
+      "serverEnv": "SERVER_ENV を IN_SCOPE とみなす",
+      "autoFork": "INTERNAL_FORK を自動 IN_SCOPE",
+      "title": "スコープポリシー設定",
+      "runtimeRequiredDefaultInScope": "RUNTIME_REQUIRED を自動 IN_SCOPE",
+      "serverEnvIncluded": "SERVER_ENV を IN_SCOPE とみなす",
+      "autoMarkForksInScope": "INTERNAL_FORK を自動 IN_SCOPE",
+      "save": "保存",
+      "saved": "ポリシーを保存しました"
+    },
     "tags": {
       "title": "タグ管理",
       "newTag": "新規タグ",
@@ -25,14 +82,11 @@
       "confirmDelete": "タグを削除しますか？",
       "added": "タグを追加しました",
       "deleted": "タグを削除しました"
-    },
-    "policy": {
-      "title": "スコープポリシー設定",
-      "runtimeRequiredDefaultInScope": "RUNTIME_REQUIRED を自動 IN_SCOPE",
-      "serverEnvIncluded": "SERVER_ENV を IN_SCOPE とみなす",
-      "autoMarkForksInScope": "INTERNAL_FORK を自動 IN_SCOPE",
-      "save": "保存",
-      "saved": "ポリシーを保存しました"
     }
+  },
+  "export": {
+    "csv": "CSV",
+    "spdx": "SPDX JSON",
+    "toast": "エクスポートが完了しました"
   }
 }
