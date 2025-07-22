@@ -1,0 +1,20 @@
+{
+  "project": {
+    "filter": {
+      "code": "コード",
+      "name": "名称",
+      "search": "検索"
+    },
+    "detail": {
+      "titleNew": "プロジェクト作成",
+      "titleEdit": "プロジェクト編集",
+      "save": "保存",
+      "cancel": "キャンセル"
+    }
+  },
+  "export": {
+    "csv": "CSV",
+    "spdx": "SPDX JSON",
+    "toast": "エクスポートが完了しました"
+  }
+}
