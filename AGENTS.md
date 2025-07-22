@@ -11,10 +11,11 @@ javascript:
 go: {}            # バックエンド用に空で残す（干渉しない）
 
 openapi:
-  spec: internal/api/openapi.yaml        # バックエンドと同一ファイルをコピー
+  spec: ../oss-catalog/internal/api/openapi.yaml        # バックエンドと同一ファイルをコピー
   generate:
     client: npm run generate             # package.json で定義
-
+ readonly:
+      - ../oss-catalog/               # ← ここを追加
 # ---- コマンド ----
 scripts:
   setup: |
