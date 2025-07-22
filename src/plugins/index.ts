@@ -12,6 +12,8 @@ import pinia from '../stores'
 import i18n from './i18n'
 // Plugins
 import vuetify from './vuetify'
+// Http client (axios instance & interceptors)
+import './http'
 
 export function registerPlugins (app: App) {
   app
