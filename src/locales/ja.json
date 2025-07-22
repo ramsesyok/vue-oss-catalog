@@ -16,5 +16,23 @@
     "csv": "CSV",
     "spdx": "SPDX JSON",
     "toast": "エクスポートが完了しました"
+  },
+  "settings": {
+    "tags": {
+      "title": "タグ管理",
+      "newTag": "新規タグ",
+      "add": "追加",
+      "confirmDelete": "タグを削除しますか？",
+      "added": "タグを追加しました",
+      "deleted": "タグを削除しました"
+    },
+    "policy": {
+      "title": "スコープポリシー設定",
+      "runtimeRequiredDefaultInScope": "RUNTIME_REQUIRED を自動 IN_SCOPE",
+      "serverEnvIncluded": "SERVER_ENV を IN_SCOPE とみなす",
+      "autoMarkForksInScope": "INTERNAL_FORK を自動 IN_SCOPE",
+      "save": "保存",
+      "saved": "ポリシーを保存しました"
+    }
   }
 }
