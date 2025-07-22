@@ -1,8 +1,13 @@
+import type { AppConfig } from '@/config'
 import type { ApiError, Problem } from '@/types/problem'
 import axios, { type AxiosError } from 'axios'
+import { OpenAPI } from '@/api'
 
-axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL
-axios.defaults.timeout = 30_000
+export function configureHttp (config: AppConfig) {
+  axios.defaults.baseURL = config.apiBaseUrl
+  axios.defaults.timeout = 30_000
+  OpenAPI.BASE = config.apiBaseUrl
+}
 
 axios.interceptors.request.use(config => {
   const user = import.meta.env.VITE_BASIC_USER
