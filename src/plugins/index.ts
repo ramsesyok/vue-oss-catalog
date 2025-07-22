@@ -9,8 +9,6 @@ import type { App } from 'vue'
 
 // Plugins
 import vuetify from './vuetify'
-// Http client (axios instance & interceptors)
-import './http'
 
 export function registerPlugins (app: App) {
   app

@@ -63,6 +63,19 @@ yarn build
 
 Once the build process is completed, your application will be ready for deployment in a production environment.
 
+### API Endpoint Configuration
+
+The frontend reads its API base URL from `public/config.json` at runtime. After deployment,
+edit this file to point to your backend server:
+
+```json
+{
+  "apiBaseUrl": "https://api.example.local/api/v1"
+}
+```
+
+No rebuild is required when `config.json` is modified.
+
 ## 💪 Support Vuetify Development
 
 This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
