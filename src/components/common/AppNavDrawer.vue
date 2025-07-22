@@ -27,9 +27,9 @@
   const { t } = useI18n()
 
   const items: NavItem[] = [
-    { titleKey: 'oss.listTitle', icon: 'mdi-package-variant', to: { name: 'oss-list' } },
-    { titleKey: 'project.listTitle', icon: 'mdi-briefcase', to: { name: 'project-list' } },
-    { titleKey: 'settings.title', icon: 'mdi-cog', to: { name: 'settings' } },
+    { titleKey: 'oss.listTitle', icon: 'mdi-package-variant', to: '/' },
+    { titleKey: 'project.listTitle', icon: 'mdi-briefcase', to: '/projects' },
+    { titleKey: 'settings.title', icon: 'mdi-cog', to: '/settings' },
   ]
 
   function onNavigate () {
