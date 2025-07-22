@@ -1,0 +1,3 @@
+[submodule "oss-catalog"]
+	path = oss-catalog
+	url = https://github.com/ramsesyok/oss-catalog.git
