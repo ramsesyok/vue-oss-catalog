@@ -19,6 +19,7 @@ openapi:
 # ---- コマンド ----
 scripts:
   setup: |
+    git submodule update --init --recursive
     npm ci
     npm run generate
   dev: npm run dev
