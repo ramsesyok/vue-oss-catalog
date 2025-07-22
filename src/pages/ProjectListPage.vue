@@ -28,9 +28,9 @@
 </template>
 
 <script setup lang="ts">
+  import { useI18n } from 'vue-i18n'
   import { ExportService } from '@/api'
   import { useProjectStore } from '@/stores/useProjectStore'
-  import { useI18n } from 'vue-i18n'
 
   const store = useProjectStore()
   const { items, page, size, total, filters, loading } = storeToRefs(store)
@@ -94,7 +94,7 @@
       a.download = payload.format === 'csv' ? 'project.csv' : 'project.spdx.json'
       a.click()
       URL.revokeObjectURL(url)
-    showToast(t('export.toast'))
+      showToast(t('export.toast'))
     } catch (error) {
       console.error(error)
     } finally {
