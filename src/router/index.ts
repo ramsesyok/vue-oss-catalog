@@ -1,18 +1,46 @@
-/**
- * router/index.ts
- *
- * Automatic routes for `./src/pages/*.vue`
- */
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
-/* eslint-disable import/no-duplicates */
-import { setupLayouts } from 'virtual:generated-layouts'
-// Composables
-import { createRouter, createWebHistory } from 'vue-router/auto'
-import { routes } from 'vue-router/auto-routes'
+import NotFoundPage from '@/pages/NotFoundPage.vue'
+import OssListPage from '@/pages/OssListPage.vue'
+import ProjectListPage from '@/pages/ProjectListPage.vue'
+import SettingsPage from '@/pages/SettingsPage.vue'
+
+import { RouteName } from '@/types/routes'
+
+const routes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    name: RouteName.OssList,
+    component: OssListPage,
+  },
+  {
+    path: '/projects',
+    name: RouteName.ProjectList,
+    component: ProjectListPage,
+  },
+  {
+    path: '/settings',
+    name: RouteName.Settings,
+    component: SettingsPage,
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: RouteName.NotFound,
+    component: NotFoundPage,
+  },
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: setupLayouts(routes),
+  routes,
+  scrollBehavior () {
+    return { top: 0 }
+  },
+})
+
+// TODO: add auth check when JWT authentication is introduced
+router.beforeEach((to, from, next) => {
+  next()
 })
 
 // Workaround for https://github.com/vitejs/vite/issues/11804
