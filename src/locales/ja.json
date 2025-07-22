@@ -30,7 +30,13 @@
       "tags": "タグ",
       "deprecated": "非推奨"
     },
-    "detailTitle": "OSS詳細"
+    "detailTitle": "OSS詳細",
+    "detail": {
+      "titleNew": "OSS作成",
+      "titleEdit": "OSS編集",
+      "save": "保存",
+      "cancel": "キャンセル"
+    }
   },
   "project": {
     "listTitle": "プロジェクト一覧",
