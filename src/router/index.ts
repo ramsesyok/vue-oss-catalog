@@ -12,16 +12,19 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: RouteName.OssList,
     component: OssListPage,
+    meta: { titleKey: 'oss.listTitle' },
   },
   {
     path: '/projects',
     name: RouteName.ProjectList,
     component: ProjectListPage,
+    meta: { titleKey: 'project.listTitle' },
   },
   {
     path: '/settings',
     name: RouteName.Settings,
     component: SettingsPage,
+    meta: { titleKey: 'settings.title' },
   },
   {
     path: '/:pathMatch(.*)*',
