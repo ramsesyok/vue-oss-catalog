@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="modelOpen" max-width="600">
     <v-card>
-      <v-card-title>{{ isNew ? 'Create OSS' : 'Edit OSS' }}</v-card-title>
+      <v-card-title>{{ isNew ? t('oss.detail.titleNew') : t('oss.detail.titleEdit') }}</v-card-title>
       <v-card-text>
         <v-form ref="formRef">
           <v-text-field v-model="form.name" label="Name" required />
@@ -12,8 +12,8 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer />
-        <v-btn color="primary" :loading="saving" @click="onSave">Save</v-btn>
-        <v-btn text @click="close">Cancel</v-btn>
+        <v-btn color="primary" :loading="saving" @click="onSave">{{ t('oss.detail.save') }}</v-btn>
+        <v-btn text @click="close">{{ t('oss.detail.cancel') }}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -22,6 +22,7 @@
 <script setup lang="ts">
   import type { OssComponentCreateRequest, OssComponentUpdateRequest } from '@/api'
   import { computed, reactive, ref, watch } from 'vue'
+  import { useI18n } from 'vue-i18n'
   import { OssService } from '@/api'
 
   interface Props {
@@ -34,6 +35,8 @@
     (e: 'update:open', value: boolean): void
     (e: 'saved'): void
   }>()
+
+  const { t } = useI18n()
 
   const modelOpen = computed({
     get: () => props.open,
